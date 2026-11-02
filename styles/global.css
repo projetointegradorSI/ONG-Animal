@@ -34,6 +34,10 @@ a {
 	font-family: "Roboto-ExtraBold";
 	src: local("Roboto-ExtraBold");
 }
+nav ul li a.ativo {
+    border-bottom: 2px solid var(--primaria);
+    padding-bottom: 4px;
+}
 
 html,
 body,

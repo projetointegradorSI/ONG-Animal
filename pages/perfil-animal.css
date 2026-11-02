@@ -27,6 +27,10 @@ header {
     text-decoration: none;
 }
 
+.logo-wrapper a:hover {
+    opacity: 0.8;
+}
+
 .logo {
     width: 50px;
     height: 50px;
@@ -34,10 +38,8 @@ header {
 }
 
 .site-name {
-    display: inline;
     font-size: var(--text-h3);
     font-weight: bold;
-    width: 100%;
 }
 
 nav {
@@ -67,6 +69,11 @@ nav ul li a.ativo {
     padding-bottom: 4px;
 }
 
+nav ul li a:hover {
+    opacity: 0.8;
+    border-bottom: 2px solid var(--primaria);
+}
+
 nav button {
     background: none;
     border: none;
@@ -75,6 +82,10 @@ nav button {
     align-items: center;
     width: 40px;
     height: 40px;
+}
+
+nav button:hover {
+    opacity: 0.8;
 }
 
 .search-bar {
@@ -101,67 +112,61 @@ input::placeholder {
     padding-left: 10px;
 }
 
-/*--------------------main--------------*/
 main {
     margin: 20px 80px;
-
 }
 
 .back-link {
     display: flex;
     align-items: center;
-    justify-content: baseline;
     gap: 30px;
 }
 
 .back-link span {
     font-size: var(--text-P);
-    text-decoration: none;
     font-weight: bold;
     color: var(--secundaria);
 }
+
 
 .back-link svg {
     width: 25px;
     height: 20px;
 }
 
+.back-link:hover {
+    opacity: 0.8;
+}
 
 .profile-layout {
     display: grid;
     grid-template-columns: 420px 1fr 280px;
     column-gap: 40px;
     align-items: start;
-    width: 100%;
     margin-top: 24px;
 }
 
 .photo-area {
-    border: 1px solid var(--secundaria);
-    background-color: var(--cards);
+    grid-column: 1;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    grid-column: 1;
-    grid-row: 1;
     padding: 10px;
+    background-color: var(--cards);
+    border: 1px solid var(--secundaria);
     border-radius: 15px;
 }
 
 .main-photo {
-    border: 1px solid var(--secundaria);
     width: 100%;
     height: 310px;
     border-radius: 12px;
     overflow: hidden;
-    background-color: var(--cards);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid var(--secundaria);
 }
 
-.main-photo img {
-
+.main-photo img,
+.thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -169,41 +174,28 @@ main {
     display: block;
 }
 
+.thumb:hover {
+      transform: scale(1.05);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
 .thumbnails {
-    background-color: var(--cards);
     display: flex;
-    flex-direction: row;
     gap: 12px;
-    width: 100%;
 }
 
 .thumb {
-    border: 1px solid var(--secundaria);
     flex: 1;
     height: 75px;
     border-radius: 9px;
     overflow: hidden;
-    background-color: var(--cards);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid var(--secundaria);
     cursor: pointer;
 }
 
-.thumb img {
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-/*foto terminando*/
-
 .animal-info {
     grid-column: 2;
-    grid-row: 1;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -216,81 +208,75 @@ main {
 .pills {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
     gap: 8px;
 }
 
-.pill {
-    border: 1px solid var(--secundaria);
-    margin-right: 10px;
-}
-
 .pills span {
-    white-space: nowrap;
-    color: var(--secundaria);
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: var(--text-P);
-    font-weight: 100;
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--secundaria);
+    font-size: var(--text-P);
+    color: var(--secundaria);
+    white-space: nowrap;
 }
-
-
 
 .adopt-card {
     grid-column: 3;
-    grid-row: 1;
-    width: 280px;
-    background-color: var(--cards);
-    border-radius: 12px;
-    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 14px;
+    padding: 24px;
+    background-color: var(--cards);
     border: 1px solid var(--secundaria);
-}
-
-.adopt-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 12px;
 }
 
 .titulo-adotar {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .titulo-adotar svg {
-    margin-right: 10px;
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
 }
 
 .titulo-adotar h1 {
-    display: flex;
-    align-items: center;
     font-size: var(--text-h3);
     font-weight: bold;
+}
+
+.adopt-title h2 {
+    font-size: var(--text-h3);
+    text-align: center;
 }
 
 .adopt-card p {
     font-size: var(--text-P);
-    font-weight: 400;
 }
 
 .adopt-card button {
+    height: 40px;
     border-radius: 15px;
     border: 1px solid var(--secundaria);
-    height: 40px;
     font-size: var(--text-h3);
     font-weight: bold;
+    cursor: pointer;
+}
+
+.adopt-card button:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    transition: all 0.3s ease;
 }
 
 .action-button-contact-button {
     background-color: var(--primaria);
-
 }
 
 .action-button-share-button {
@@ -298,130 +284,125 @@ main {
 }
 
 .responsible {
+    font-size: var(--text-P);
     font-weight: 200;
-    font-size: var(--text-P);
 }
 
-
-
-
-.description-card{
-    margin-top: 20px;
-   display: grid;
-   grid-template-columns: 65%  30%;
-   gap: 55px;
-}
-.description{
-    background-color: var(--cards);
-    border-radius: 15px;
-    border: 1px solid var(--secundaria);
-    padding: 20px;
-
-}
-.description h2{
-    font-size: var(--text-h3);
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.description p{
-    font-size: var(--text-P);
-    font-weight: 400;
-    line-height: 1;
-}
-
-.health-info{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    background-color: var(--cards);
-    border-radius: 15px;
-    border: 1px solid var(--secundaria);
-    padding: 20px;
-}
-.health-info h2{
-    font-size: var(--text-h3);
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.health-info p{
-    font-size: var(--text-P);
-    font-weight: 400;
-    line-height: 1;
-}
-
-.details-card{
+.description-card {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: var(--cards);
-    border-radius: 15px;
-    border: 1px solid var(--secundaria);
-    padding: 20px;
+    grid-template-columns: 65% 30%;
+    gap: 55px;
     margin-top: 20px;
 }
-.detail{
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-}
-.detail h3{
-    font-size: var(--text-P);
-    font-weight: bold;
-}
-.detail .value{
-    font-size: var(--text-P);
-    font-weight: 400;
-}
-.detail svg{
-    width: 30px;
-    height: 30px;
-    color: var(--primaria);
-}
-.border-right{
-    border-right: 1px solid var(--secundaria);
-}
-.gallery-card{
-    margin-top: 20px;
+
+.description,
+.health-info {
     background-color: var(--cards);
-    border-radius: 15px;
     border: 1px solid var(--secundaria);
+    border-radius: 15px;
     padding: 20px;
 }
-.gallery-card h2{
+
+.description h2,
+.health-info h2 {
     font-size: var(--text-h3);
     font-weight: bold;
     margin-bottom: 10px;
 }
-.gallery-grid{
+
+.description p,
+.health-info p {
+    font-size: var(--text-P);
+    line-height: 1;
+}
+
+.health-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    background-color: var(--cards);
+    border: 1px solid var(--secundaria);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
-.gallery-photo{
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 15px;
-    border: 1px solid var(--secundaria);
+
+.detail svg {
+    width: 30px;
+    height: 30px;
+}
+
+.detail h3,
+.detail .value {
+    font-size: var(--text-P);
+}
+
+.detail h3 {
+    font-weight: bold;
+}
+
+.border-right {
+    border-right: 1px solid var(--secundaria);
+}
+
+.gallery-card {
     background-color: var(--cards);
-    cursor: pointer;
+    border: 1px solid var(--secundaria);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.gallery-card h2 {
+    font-size: var(--text-h3);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.gallery-photo {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    border: 1px solid var(--secundaria);
     overflow: hidden;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
 }
- .gallery-photo img {
-    border-radius: 15px;
+
+.gallery-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     display: block;
 }
 
-/* ── footer ── */
+.gallery-card .gallery-photo:hover {
+      transform: scale(1.05);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
 footer {
     position: relative;
     margin-top: 90px;
@@ -434,27 +415,31 @@ footer {
 }
 
 .footer-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .footer-nav p {
     color: var(--texto-claro);
     font-size: var(--text-P);
-    font-weight: 400;
 }
 
 .social-media {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 20px;
     margin-right: 80px;
+}
+
+.social-media li a img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    transition: all 0.3s ease;
 }
 
 .social-media li a img {
@@ -465,4 +450,165 @@ footer {
 #whatsapp img {
     width: 35px;
     height: 35px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .logo-wrapper {
+        margin-left: 40px;
+    }
+
+    .search-bar {
+        margin-right: 40px;
+    }
+
+    main {
+        margin: 20px 40px;
+    }
+
+    .profile-layout {
+        grid-template-columns: 1fr 280px;
+        grid-template-rows: auto auto;
+    }
+
+    .photo-area {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .animal-info {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .adopt-card {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    .description-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 16px 0;
+        gap: 12px;
+    }
+
+    .logo-wrapper {
+        margin-left: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-bar {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    input {
+        width: 200px;
+    }
+
+    main {
+        margin: 20px 24px;
+    }
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .photo-area,
+    .animal-info,
+    .adopt-card {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .adopt-card {
+        width: 100%;
+    }
+
+    .details-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail:nth-child(1),
+    .detail:nth-child(2) {
+        border-bottom: 1px solid var(--secundaria);
+        padding-bottom: 16px;
+    }
+
+    .detail:nth-child(2) {
+        border-right: none;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        margin-top: 40px;
+    }
+
+    .footer-nav {
+        position: static;
+        transform: none;
+    }
+
+    .social-media {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        gap: 12px;
+    }
+
+    input {
+        width: 160px;
+    }
+
+    main {
+        margin: 16px;
+    }
+
+    .back-link span {
+        font-size: 13px;
+    }
+
+    .details-card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .border-right {
+        border-right: none;
+    }
+
+    .detail:nth-child(odd) {
+        border-right: 1px solid var(--secundaria);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .description-card {
+        gap: 16px;
+    }
 }
