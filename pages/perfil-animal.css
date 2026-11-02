@@ -382,14 +382,44 @@ main {
 .border-right{
     border-right: 1px solid var(--secundaria);
 }
-
-
-
-
-
-
-
-
+.gallery-card{
+    margin-top: 20px;
+    background-color: var(--cards);
+    border-radius: 15px;
+    border: 1px solid var(--secundaria);
+    padding: 20px;
+}
+.gallery-card h2{
+    font-size: var(--text-h3);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.gallery-photo{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    border: 1px solid var(--secundaria);
+    background-color: var(--cards);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+ .gallery-photo img {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
 
 /* ── footer ── */
 footer {
