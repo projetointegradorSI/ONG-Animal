@@ -9,18 +9,19 @@ function rederizaranimal(animais) {
     const grid = document.getElementById('animais')
     if (animais.lenght === 0) {
         grid.innerHTML = '<p>Animal não encontrado</p>'
+        return;
     }
 
     grid.innerHTML = animais.map(cardanimal).join('');
 }
 
-function cardanimal(animais){
+function cardanimal(animal){
     return`
         <div class="cardsanimal">
-            <img src="${animais.fotos[0]}" alt="${animais.nome}">
-            <h3>${animais.nome}</h3>
-            <p>${animais.especie}</p>
-            <a href="../pages/perfil-animal.html?id=${animais.id}">
+            <img src="${animal.fotos[0]}" alt="${animal.nome}">
+            <h3>${animal.nome}</h3>
+            <p>${animal.especie}</p>
+            <a href="../pages/perfil-animal.html?id=${animal.id}&origem=animal">
                 <button>QUERO ADOTAR</button>
             </a>
         </div>
