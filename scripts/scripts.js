@@ -20,7 +20,7 @@ function cardanimal(animais){
             <img src="${animais.fotos[0]}" alt="${animais.nome}">
             <h3>${animais.nome}</h3>
             <p>${animais.especie}</p>
-            <a href="../pages/perfil-animal.html?id=${animais.id}">
+            <a href="./pages/perfil-animal.html?id=${animais.id}">
                 <button>QUERO ADOTAR</button>
             </a>
         </div>
