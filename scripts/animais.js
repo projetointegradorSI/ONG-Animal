@@ -1,40 +1,28 @@
 import { animais } from '../dados/dados-animais.js';
 
+document.addEventListener('DOMContentLoaded', function() {
+    rederizaranimal(animais);
 
-document.addEventListener('DOMContentLoaded', () => {
-    renderizaranimal(animais)
-
-    document.getElementById('btn-busca').addEventListener("click", pesquisar)
-
-    document.getElementById('input-pesquisa').addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            pesquisar()
-        }
-    })
 })
 
-
-function renderizaranimal(animais) {
+function rederizaranimal(animais) {
     const grid = document.getElementById('animais')
-    if (animais.length > 0) {
-        grid.innerHTML = animais.map(cardsanimal).join('');
-    } else {
-        grid.innerHTML = '<p>Nenhum animal encontrado.</p>';
+    if (animais.lenght === 0) {
+        grid.innerHTML = '<p>Animal não encontrado</p>'
     }
+
+    grid.innerHTML = animais.map(cardanimal).join('');
 }
 
-
-function cardsanimal(animal) {
-    return `
+function cardanimal(animais){
+    return`
         <div class="cardsanimal">
-            <img src="${animal.fotos[0]}" alt="${animal.nome}">
-            <h3>${animal.nome}</h3>
-            <p>${animal.especie} · ${animal.idade}</p>
-            <a href="./perfil-animal.html?id=${animal.id}">
+            <img src="${animais.fotos[0]}" alt="${animais.nome}">
+            <h3>${animais.nome}</h3>
+            <p>${animais.especie}</p>
+            <a href="../pages/perfil-animal.html?id=${animais.id}">
                 <button>QUERO ADOTAR</button>
             </a>
         </div>
-    `;
+    `
 }
-
-
