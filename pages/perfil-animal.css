@@ -227,6 +227,8 @@ main {
     grid-column: 3;
     display: flex;
     flex-direction: column;
+    align-items: left;
+    justify-content: left;
     gap: 14px;
     padding: 24px;
     background-color: var(--cards);
@@ -247,13 +249,14 @@ main {
 }
 
 .titulo-adotar h1 {
+    align-items: center;
     font-size: var(--text-h3);
     font-weight: bold;
 }
 
 .adopt-title h2 {
     font-size: var(--text-h3);
-    text-align: center;
+    text-align: left;
 }
 
 .adopt-card p {
@@ -297,6 +300,10 @@ main {
 
 .description,
 .health-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
     background-color: var(--cards);
     border: 1px solid var(--secundaria);
     border-radius: 15px;
@@ -305,6 +312,8 @@ main {
 
 .description h2,
 .health-info h2 {
+    margin-top: 10px;
+    text-align: left;
     font-size: var(--text-h3);
     font-weight: bold;
     margin-bottom: 10px;
@@ -317,10 +326,11 @@ main {
 }
 
 .health-info {
+    
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 }
 
 .details-card {
