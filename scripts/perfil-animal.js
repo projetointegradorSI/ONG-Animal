@@ -6,6 +6,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const id = Number(parametro.get('id'));
     const origem = parametro.get('origem');
     const linkvoltar = document.getElementById('link-voltar');
+    const botaocompartilhar = document.getElementById('share-button');
+   
+botaocompartilhar.addEventListener('click', () => {
+
+  if (navigator.share) {
+    navigator.share({
+      title: 'Título da Página',
+      text: 'Confira este conteúdo incrível!',
+      url: window.location.href 
+    })
+    .then(() => console.log('Compartilhado com sucesso!'))
+    .catch((error) => console.log('Erro ao compartilhar:', error));
+  } else {
+   
+    navigator.clipboard.writeText(window.location.href);
+    alert('Link copiado para a área de transferência!');
+  }
+});
 
     if (origem === 'animais') {
 
