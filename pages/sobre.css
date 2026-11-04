@@ -10,7 +10,7 @@ body {
   margin: 0 80px;
 }
 
-/* --- HEADER / NAVBAR --- */
+
 header {
   background-color: var(--secundaria);
   width: 100%;
@@ -188,8 +188,7 @@ main {
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  /* no lugar dos espaços enormes entre os itens */
+  gap: 20px;
 }
 
 .contact-item {
@@ -199,7 +198,7 @@ main {
   gap: 10px;
   background-color: #F8FAFB;
   border-radius: 15px;
-  width: 100%;
+  width: 2222px;
   max-width: 380px;
   border: 1px solid var(--secundaria);
   padding: 10px 20px 24px;
@@ -246,5 +245,8 @@ main {
 
 .contact-item input {
   border: 1px solid var(--secundaria);
-
 }
+
+#endereco , #email {
+  margin-bottom: px;  
+} 

@@ -81,62 +81,63 @@
             equipe.</p>
           <div class="contact-body">
             <div class="contact-item"><label for="name">Nome * </label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" placeholder="Digite seu nome aqui..." required>
               <label for="email">Email * </label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" placeholder="Digite seu email aqui..." required>
               <label for="telefone">Telefone (opcional)</label>
-              <input type="tel" id="telefone" name="telefone" required>
+              <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone aqui..." required>
               <label for="mensagem">Mensagem * </label>
-              <input type="text" id="mensagem" name="mensagem" required>
+              <input type="text" id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..." required>
               <button type="submit">Enviar</button>
             </div>
+            <div class="contact-space">
+              <div class="contact-info">
+                <h1>Informações de contato</h1>
 
-            <div class="contact-info">
-              <h1>Informações de contato</h1>
+                <div class="endereco" id="endereco">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.11597 14.8681C7.11597 14.8681 7.11628 14.8684 7.49997 14.375L7.88365 14.8684C7.65797 15.0439 7.34165 15.0437 7.11597 14.8681Z"
+                      fill="black" />
+                    <path
+                      d="M7.5 3.75C6.11929 3.75 5 4.86929 5 6.25C5 7.63069 6.11929 8.75 7.5 8.75C8.88069 8.75 10 7.63069 10 6.25C10 4.86929 8.88069 3.75 7.5 3.75ZM6.25 6.25C6.25 5.55964 6.80963 5 7.5 5C8.19037 5 8.75 5.55964 8.75 6.25C8.75 6.94037 8.19037 7.5 7.5 7.5C6.80963 7.5 6.25 6.94037 6.25 6.25Z"
+                      fill-rule="evenodd" clip-rule="evenodd" fill="black" />
+                    <path
+                      d="M7.116 14.8681L7.5 14.375C7.88369 14.8684 7.88437 14.8678 7.88437 14.8678L7.88556 14.8669L7.88944 14.8639L7.90313 14.8531C7.91488 14.8438 7.93181 14.8304 7.95362 14.813C7.99712 14.7782 8.06006 14.7273 8.13956 14.6617C8.2985 14.5305 8.52406 14.34 8.79412 14.0999C9.33337 13.6206 10.0542 12.9401 10.7771 12.1369C11.4981 11.3357 12.2332 10.3994 12.7908 9.408C13.3453 8.42237 13.75 7.33706 13.75 6.25C13.75 4.5924 13.0915 3.00269 11.9194 1.83058C10.7473 0.658481 9.15763 0 7.5 0C5.8424 0 4.25269 0.658481 3.08058 1.83058C1.90848 3.00269 1.25 4.5924 1.25 6.25C1.25 7.33706 1.65476 8.42237 2.20917 9.408C2.76683 10.3994 3.50189 11.3357 4.22294 12.1369C4.94581 12.9401 5.66664 13.6206 6.20587 14.0999C6.47594 14.34 6.7015 14.5305 6.86044 14.6617C6.93994 14.7273 7.00288 14.7782 7.04638 14.813C7.06819 14.8304 7.08512 14.8438 7.09687 14.8531L7.11056 14.8639L7.11444 14.8669L7.116 14.8681ZM3.96447 2.71447C4.90215 1.77678 6.17392 1.25 7.5 1.25C8.82606 1.25 10.0979 1.77678 11.0356 2.71447C11.9732 3.65215 12.5 4.92392 12.5 6.25C12.5 7.03794 12.2016 7.90575 11.7014 8.79513C11.2043 9.67875 10.5331 10.5393 9.84794 11.3006C9.16456 12.0599 8.47913 12.7075 7.96369 13.1657C7.786 13.3236 7.62906 13.4586 7.5 13.5674C7.37094 13.4586 7.214 13.3236 7.03631 13.1657C6.52087 12.7075 5.83544 12.0599 5.15206 11.3006C4.46686 10.5393 3.79567 9.67875 3.29864 8.79513C2.79836 7.90575 2.5 7.03794 2.5 6.25C2.5 4.92392 3.02678 3.65215 3.96447 2.71447Z"
+                      fill-rule="evenodd" clip-rule="evenodd" fill="black" />
+                  </svg>
+                  </div>
+                  <h2>Endereço</h2>
 
-              <div class="endereco">
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.11597 14.8681C7.11597 14.8681 7.11628 14.8684 7.49997 14.375L7.88365 14.8684C7.65797 15.0439 7.34165 15.0437 7.11597 14.8681Z"
-                    fill="black" />
-                  <path
-                    d="M7.5 3.75C6.11929 3.75 5 4.86929 5 6.25C5 7.63069 6.11929 8.75 7.5 8.75C8.88069 8.75 10 7.63069 10 6.25C10 4.86929 8.88069 3.75 7.5 3.75ZM6.25 6.25C6.25 5.55964 6.80963 5 7.5 5C8.19037 5 8.75 5.55964 8.75 6.25C8.75 6.94037 8.19037 7.5 7.5 7.5C6.80963 7.5 6.25 6.94037 6.25 6.25Z"
-                    fill-rule="evenodd" clip-rule="evenodd" fill="black" />
-                  <path
-                    d="M7.116 14.8681L7.5 14.375C7.88369 14.8684 7.88437 14.8678 7.88437 14.8678L7.88556 14.8669L7.88944 14.8639L7.90313 14.8531C7.91488 14.8438 7.93181 14.8304 7.95362 14.813C7.99712 14.7782 8.06006 14.7273 8.13956 14.6617C8.2985 14.5305 8.52406 14.34 8.79412 14.0999C9.33337 13.6206 10.0542 12.9401 10.7771 12.1369C11.4981 11.3357 12.2332 10.3994 12.7908 9.408C13.3453 8.42237 13.75 7.33706 13.75 6.25C13.75 4.5924 13.0915 3.00269 11.9194 1.83058C10.7473 0.658481 9.15763 0 7.5 0C5.8424 0 4.25269 0.658481 3.08058 1.83058C1.90848 3.00269 1.25 4.5924 1.25 6.25C1.25 7.33706 1.65476 8.42237 2.20917 9.408C2.76683 10.3994 3.50189 11.3357 4.22294 12.1369C4.94581 12.9401 5.66664 13.6206 6.20587 14.0999C6.47594 14.34 6.7015 14.5305 6.86044 14.6617C6.93994 14.7273 7.00288 14.7782 7.04638 14.813C7.06819 14.8304 7.08512 14.8438 7.09687 14.8531L7.11056 14.8639L7.11444 14.8669L7.116 14.8681ZM3.96447 2.71447C4.90215 1.77678 6.17392 1.25 7.5 1.25C8.82606 1.25 10.0979 1.77678 11.0356 2.71447C11.9732 3.65215 12.5 4.92392 12.5 6.25C12.5 7.03794 12.2016 7.90575 11.7014 8.79513C11.2043 9.67875 10.5331 10.5393 9.84794 11.3006C9.16456 12.0599 8.47913 12.7075 7.96369 13.1657C7.786 13.3236 7.62906 13.4586 7.5 13.5674C7.37094 13.4586 7.214 13.3236 7.03631 13.1657C6.52087 12.7075 5.83544 12.0599 5.15206 11.3006C4.46686 10.5393 3.79567 9.67875 3.29864 8.79513C2.79836 7.90575 2.5 7.03794 2.5 6.25C2.5 4.92392 3.02678 3.65215 3.96447 2.71447Z"
-                    fill-rule="evenodd" clip-rule="evenodd" fill="black" />
-                </svg>
-                <h2>Endereço</h2>
+                </div>
+                <p>Rua Das Flores, 123 - Bairro, Cidade - Estado<br>Lins – SP | CEP 16400-000</p>
+                <div class="email" id="email">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 3.37503L6.375 6.28125C7.04169 6.78125 7.95831 6.78125 8.625 6.28125L12.5 3.375"
+                      stroke-linecap="round" stroke-linejoin="round" stroke="black" />
+                    <path
+                      d="M3.125 2.125H11.875C12.5654 2.125 13.125 2.68464 13.125 3.375V9.625C13.125 10.3154 12.5654 10.875 11.875 10.875H3.125C2.43464 10.875 1.875 10.3154 1.875 9.625V3.375C1.875 2.68464 2.43464 2.125 3.125 2.125Z"
+                      stroke-linecap="round" stroke="black" />
+                  </svg>
+                  <h2>Email</h2>
+                </div>
 
-              </div>
-              <p>Rua Das Flores, 123 - Bairro, Cidade - Estado<br>Lins – SP | CEP 16400-000</p>
-              <div class="email">
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.5 3.37503L6.375 6.28125C7.04169 6.78125 7.95831 6.78125 8.625 6.28125L12.5 3.375"
-                    stroke-linecap="round" stroke-linejoin="round" stroke="black" />
-                  <path
-                    d="M3.125 2.125H11.875C12.5654 2.125 13.125 2.68464 13.125 3.375V9.625C13.125 10.3154 12.5654 10.875 11.875 10.875H3.125C2.43464 10.875 1.875 10.3154 1.875 9.625V3.375C1.875 2.68464 2.43464 2.125 3.125 2.125Z"
-                    stroke-linecap="round" stroke="black" />
-                </svg>
-                <h2>Email</h2>
-              </div>
-
-              <p>contato@adocao-lins.org</p>
-              <h1>Redes sociais</h1>
-              <div class="social-icons">
-                <a href="#" target="_blank">
-                  <img src="../img/home/insta.png" alt="Instagram">
-                </a>
-                <a href="#" target="_blank">
-                  <img src="../img/home/facebook.png" alt="Facebook">
-                </a>
-                <a href="#" target="_blank">
-                  <img src="../img/home/WhatsApp.png" alt="WhatsApp">
-                </a>
+                <p>contato@adocao-lins.org</p>
+                <h1>Redes sociais</h1>
+                <div class="social-icons">
+                  <a href="#" target="_blank">
+                    <img src="../img/home/insta.png" alt="Instagram">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="../img/home/facebook.png" alt="Facebook">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="../img/home/WhatsApp.png" alt="WhatsApp">
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
         </div>
       </section>
