@@ -25,7 +25,7 @@ Confira as contribuições de cada integrante no projeto.
 | Anderson Lucas | 5 | 8 | 8 | +1429 | -24 |
 | Luis Henrique | 2 | 9 | 9 | +542 | -769 |
 | Murillo Franca | 3 | 2 | 4 | +79 | -28 |
-| Rafa Amorim | 0 | 0 | 0 | +0 | -0 |
+| Rafa Amorim | 1 | 4 | 4 | +0 | -0 |
 <!-- COMMITS-END -->
 
 *Estatísticas atualizadas automaticamente pelo GitHub Actions.*
